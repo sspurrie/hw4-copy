@@ -40,6 +40,9 @@ three turns. If you have, the game ends in a loss.
 
 ## Some implementation notes
 
+You have license to vary the wall's size and placement and the spacing between it and the walls.
+Your final product must have several rows of bricks in the wall.
+
 To start the game, you can place the ball in the center and wait for 3 seconds, then begin the ball moving down 
 towards one side or the other at an angle.
 
