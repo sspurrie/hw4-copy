@@ -16,7 +16,7 @@ These colors are not required- you can choose to be creative about the colors an
 and the number of bricks in each row.
 
 The slightly larger rectangle at the bottom is the paddle. The paddle is in a fixed position in the vertical 
-dimension, but moves back and forth across the screen along with the mouse until it 
+dimension, but moves back and forth across the screen along with the mouse or keyboard until it 
 reaches the edge of its space.
 
 ![Example of breakout game](./diagram.png)
@@ -30,7 +30,7 @@ ball's path- it won't appear on the screen.*)
 As you can see from the second diagram, the ball is about to collide with one of the bricks on the bottom row. 
 When that happens, the ball 
 bounces just as it does on any other collision, but the brick disappears. The third diagram shows what the game 
-looks like after that collision and after you ave moved the paddle to line it up with the 
+looks like after that collision and after you have moved the paddle to line it up with the 
 oncoming ball. The play continues in this way until one of the following conditions occurs:
 
 - The ball moves below the paddle, which means that the player must have missed it with the paddle. In this case, 
@@ -94,8 +94,8 @@ This is so that we can discuss this together and compare designs either in a cla
 Your ball should be able to reflect off of walls, but does not need to test for intersections with bricks in the wall 
 or the paddle. You will push this working code.
 
-* **Part 3** : For this milestone you should commit and push the completed assignment. The ball should be able to b
-ounce off of the paddle and intersect bricks. The paddle should be able to move with the mouse or keyboard. 
+* **Part 3** : For this milestone you should commit and push the completed assignment. The ball should be able to bounce 
+off of the paddle and intersect bricks. The paddle should be able to move with the mouse or keyboard. 
 The game should end when all the bricks disappear or the player loses three lives. 
 
 Please make sure to follow the guidelines for good Java style that we have shared with you in the past. 
