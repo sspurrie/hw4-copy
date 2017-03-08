@@ -1,4 +1,3 @@
-#DO NOT FORK YET!
 
 COMP 124 HW 5:  Breakout!
 ==========================
