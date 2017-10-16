@@ -1,5 +1,5 @@
 
-COMP 124 HW 5:  Breakout!
+COMP 124 HW 4:  Breakout!
 ==========================
 
 For this homework assignment, you will write a program to play the classic arcade game of Breakout, which
