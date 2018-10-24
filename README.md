@@ -90,15 +90,15 @@ methods short with a single clear purpose.
 ### Due Dates
 This homework will have three milestones:
 
-* **Part 1** : You will complete a class diagram with important instance variables and methods shown on the diagram.
+* **Part 1**: You will complete a class diagram with important instance variables and methods shown on the diagram.
 This is so that we can discuss this together and compare designs either in a class or lab session.
 
-* **Part 2** : For this milestone you only need to draw the graphical objects on the screen and have the ball animate. 
+* **Part 2**: For this milestone you only need to draw the graphical objects on the screen and have the ball animate. 
 Your ball should be able to reflect off of the top, sides, and bottom, but does not need to test for intersections with 
 bricks in the brick wall 
 or the paddle. You will push this working code.
 
-* **Part 3** : For this milestone you should commit and push the completed assignment. The ball should be able to bounce 
+* **Part 3**: For this milestone you should commit and push the completed assignment. The ball should be able to bounce 
 off of the paddle and intersect bricks. The paddle should be able to move with the mouse or keyboard. 
 The game should end when all the bricks disappear or the player loses three lives. 
 
