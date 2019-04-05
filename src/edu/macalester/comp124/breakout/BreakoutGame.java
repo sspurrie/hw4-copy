@@ -24,10 +24,7 @@ public class BreakoutGame extends CanvasWindow {
     double r = 15;
     double dx = 11;
     double dy = 7;
-    double centerX;
-    double centerY;
-    double maxX;
-    double maxY;
+
 
     public BreakoutGame() {
         super("Breakout!", CANVAS_WIDTH, CANVAS_HEIGHT);
