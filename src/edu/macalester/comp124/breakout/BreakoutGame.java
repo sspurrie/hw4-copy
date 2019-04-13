@@ -34,6 +34,8 @@ public class BreakoutGame extends CanvasWindow implements MouseMotionListener {
     Wall right;
     Wall bottom;
     Brick brick;
+    ArrayList<GraphicsObject> arr;
+    int lives = 3;
 
 
     public BreakoutGame() {
@@ -75,6 +77,7 @@ public class BreakoutGame extends CanvasWindow implements MouseMotionListener {
         add(left);
         bottom = new Wall(0,CANVAS_HEIGHT,CANVAS_WIDTH,10);
         add(bottom);
+        arr = new ArrayList<GraphicsObject>();
         for(int x = 0; x<10; x++){
             for(int y = 0; y<10; y++) {
                 brick = new Brick(y*80, 300+x*15, 80, 15);
@@ -94,6 +97,7 @@ public class BreakoutGame extends CanvasWindow implements MouseMotionListener {
                     brick.setStrokeColor(Color.blue);
                 }
                 add(brick);
+                arr.add(brick);
             }
         }
     }
@@ -135,7 +139,9 @@ public class BreakoutGame extends CanvasWindow implements MouseMotionListener {
     public void collisionCheck(GraphicsObject obj){
         if (obj != null){
             if(obj.equals(bottom)){
-                ball.flipDy();
+                lives -= 1;
+                remove(ball);
+                draw();
             }
             if(obj.equals(right)){
                 ball.flipDx();
@@ -151,25 +157,32 @@ public class BreakoutGame extends CanvasWindow implements MouseMotionListener {
             }
             if(obj.equals(brick)){
                 remove(brick);
+                arr.remove(brick);
                 numBricks -= 1;
             }
         }
     }
 
     public void eachFrame() {
-        GraphicsObject obj1 = getElementAt(ball.getX(), ball.getY());
+        GraphicsObject obj1 = getElementAt(ball.getX()+ball.getWidth()/2, ball.getY()+ball.getHeight()/2);
         GraphicsObject obj2 = getElementAt(ball.getX() + ball.getWidth(), ball.getY());
         GraphicsObject obj3 = getElementAt(ball.getX(), ball.getY() + ball.getHeight());
         GraphicsObject obj4 = getElementAt(ball.getX() + ball.getWidth(), ball.getY() + ball.getHeight());
 
 
         if (numBricks == 0) {
+            System.out.println("You Win");
+            draw();
+        }
 
+        if (lives == 0){
+            System.out.println("You Lose");
+            draw();
         }
 
         collisionCheck(obj1);
 //        collisionCheck(obj2);
-        collisionCheck(obj3);
+//        collisionCheck(obj3);
 //        collisionCheck(obj4);
         ball.updatePosition();
     }
